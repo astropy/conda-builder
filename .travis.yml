@@ -10,6 +10,10 @@ env:
     - python=2.7 CONDA_PY=27 CONDA_NPY=1.9
     - python=3.3 CONDA_PY=33 CONDA_NPY=1.9
     - python=3.4 CONDA_PY=34 CONDA_NPY=1.9
+    - python=2.6 CONDA_PY=26 CONDA_NPY=1.8
+    - python=2.7 CONDA_PY=27 CONDA_NPY=1.8
+    - python=3.3 CONDA_PY=33 CONDA_NPY=1.8
+    - python=3.4 CONDA_PY=34 CONDA_NPY=1.8
 
   global:
     - secure: "I3W4wZHGPszNoJzLlKuvXjsDZDzKqHZI10hXEzZkdusifSZ5rg3iwWimndKeUrJcZgOAAv/hxCAB66Izp0oKq7d1zftbCaAR71w6ZZca4D3TIvDntNQqL6KYPLrOq2Jt+6I5uFu5JUB4ciBY8AF6oQ8LKUguO75pTfbV9ZCEkmg="

@@ -3,7 +3,7 @@ package:
   version: !!str 1.0rc1
 
 source:
-  fn: astropy-1.0rc1
+  fn: astropy-1.0rc1.tar.gz
   url: http://pypi.python.org/packages/source/a/astropy/astropy-1.0rc1.tar.gz
   md5: f41f0e18b5142c5cc381ee331e530ab1
 

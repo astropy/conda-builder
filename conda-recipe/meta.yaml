@@ -12,6 +12,8 @@ requirements:
     - python
     - setuptools
     - numpy
+  run:
+    - numpy
 
 test:
   imports:

@@ -13,6 +13,7 @@ requirements:
     - setuptools
     - numpy
   run:
+    - python
     - numpy
 
 test:

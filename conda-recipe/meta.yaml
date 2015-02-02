@@ -14,8 +14,8 @@ requirements:
     - numpy
 
 test:
-  commands:
-    - python -c 'import astropy; astropy.test()'
+  imports:
+    - astropy
 
 about:
   home: http://www.astropy.org

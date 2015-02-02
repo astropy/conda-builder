@@ -12,7 +12,7 @@ env:
     - python=3.4 CONDA_PY=34 CONDA_NPY=1.9
 
   global:
-    - secure: "x2TPUWsdHVjYoKD4OOSmfq5qo/5Bk+hK+CU/0+1evXc/vvlpyUcj6KkYH/H4M2mVUutARDKYfKGE87kJ+V1WZ4XcAnpp1h89oiMQK9GYe4gocfr7kNyUlxGANbJ5tGMFJBeaYLIaZgRgH+Vi1digOm4JwfYDHJcSkdfSKi8GWYM="
+    - secure: "I3W4wZHGPszNoJzLlKuvXjsDZDzKqHZI10hXEzZkdusifSZ5rg3iwWimndKeUrJcZgOAAv/hxCAB66Izp0oKq7d1zftbCaAR71w6ZZca4D3TIvDntNQqL6KYPLrOq2Jt+6I5uFu5JUB4ciBY8AF6oQ8LKUguO75pTfbV9ZCEkmg="
 
 install:
   - source continuous-integration/travis/install_$TRAVIS_OS_NAME.sh

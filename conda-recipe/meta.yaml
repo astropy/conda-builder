@@ -1,0 +1,22 @@
+package:
+  name: astropy
+  version: !!str 1.0rc1
+
+source:
+  fn: astropy-1.0rc1
+  url: http://pypi.python.org/packages/source/a/astropy/astropy-1.0rc1.tar.gz
+  md5: f41f0e18b5142c5cc381ee331e530ab1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+
+test:
+  commands:
+    - python -c 'import astropy; astropy.test()'
+
+about:
+  home: http://www.astropy.org
+  license: BSD

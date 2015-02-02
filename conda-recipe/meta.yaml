@@ -19,6 +19,8 @@ requirements:
 test:
   imports:
     - astropy
+  commands:
+    - python -c "import astropy; astropy.test()"
 
 about:
   home: http://www.astropy.org

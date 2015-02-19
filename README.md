@@ -1,7 +1,11 @@
 About
 =====
 
-This is a repository to build conda packages for Astropy release candidates, using AppVeyor and Travis.
+This is a repository to build conda packages for Astropy for use in continuous
+integration on Travis and AppVeyor. The official conda channels include only
+builds with the latest Numpy, for example Astropy 1.0 is available only with
+Numpy 1.9. In this repository we build additional packages (such as Astropy 1.0
+with Numpy 1.8) and upload these to the ``astropy-ci-extras`` binstar channel.
 
 Forked from [python-appveyor-conda-example](https://github.com/rmcgibbo/python-appveyor-conda-example)
 

@@ -1,7 +1,6 @@
 environment:
-  # See README for information on the token
   binstar_token:
-    secure: ncOttB9ylQmQGdCNvxMZdohwsQhDGeVJs949U+FCSDjVevD9haotVsCyyAqKeF9v
+    secure: +yxmUm82sgTog7vIjMAZKvc5r8zDnItB+X52ILoILezzH/+xU3jYDqgqcfGpOHT7
 
   global:
     # SDK v7.0 MSVC Express 2008's SetEnv.cmd script will fail if the
@@ -15,98 +14,146 @@ environment:
       PYTHON_VERSION: "2.6"
       PYTHON_ARCH: "32"
       CONDA_PY: "26"
-      CONDA_NPY: "18"
+      CONDA_NPY: "16"
 
     - PYTHON: "C:\\Python26_64"
       PYTHON_VERSION: "2.6"
       PYTHON_ARCH: "64"
       CONDA_PY: "26"
-      CONDA_NPY: "18"
+      CONDA_NPY: "16"
 
     - PYTHON: "C:\\Python27_32"
       PYTHON_VERSION: "2.7"
       PYTHON_ARCH: "32"
       CONDA_PY: "27"
-      CONDA_NPY: "18"
+      CONDA_NPY: "16"
 
     - PYTHON: "C:\\Python27_64"
       PYTHON_VERSION: "2.7"
       PYTHON_ARCH: "64"
       CONDA_PY: "27"
-      CONDA_NPY: "18"
+      CONDA_NPY: "16"
 
     - PYTHON: "C:\\Python33_32"
       PYTHON_VERSION: "3.3"
       PYTHON_ARCH: "32"
       CONDA_PY: "33"
-      CONDA_NPY: "18"
+      CONDA_NPY: "16"
 
     - PYTHON: "C:\\Python33_64"
       PYTHON_VERSION: "3.3"
       PYTHON_ARCH: "64"
       CONDA_PY: "33"
-      CONDA_NPY: "18"
+      CONDA_NPY: "16"
 
     - PYTHON: "C:\\Python34_32"
       PYTHON_VERSION: "3.4"
       PYTHON_ARCH: "32"
       CONDA_PY: "34"
-      CONDA_NPY: "18"
+      CONDA_NPY: "16"
 
     - PYTHON: "C:\\Python34_64"
       PYTHON_VERSION: "3.4"
       PYTHON_ARCH: "64"
       CONDA_PY: "34"
-      CONDA_NPY: "18"
+      CONDA_NPY: "16"
 
     - PYTHON: "C:\\Python26_32"
       PYTHON_VERSION: "2.6"
       PYTHON_ARCH: "32"
       CONDA_PY: "26"
-      CONDA_NPY: "19"
+      CONDA_NPY: "17"
 
     - PYTHON: "C:\\Python26_64"
       PYTHON_VERSION: "2.6"
       PYTHON_ARCH: "64"
       CONDA_PY: "26"
-      CONDA_NPY: "19"
+      CONDA_NPY: "17"
 
     - PYTHON: "C:\\Python27_32"
       PYTHON_VERSION: "2.7"
       PYTHON_ARCH: "32"
       CONDA_PY: "27"
-      CONDA_NPY: "19"
+      CONDA_NPY: "17"
 
     - PYTHON: "C:\\Python27_64"
       PYTHON_VERSION: "2.7"
       PYTHON_ARCH: "64"
       CONDA_PY: "27"
-      CONDA_NPY: "19"
+      CONDA_NPY: "17"
 
     - PYTHON: "C:\\Python33_32"
       PYTHON_VERSION: "3.3"
       PYTHON_ARCH: "32"
       CONDA_PY: "33"
-      CONDA_NPY: "19"
+      CONDA_NPY: "17"
 
     - PYTHON: "C:\\Python33_64"
       PYTHON_VERSION: "3.3"
       PYTHON_ARCH: "64"
       CONDA_PY: "33"
-      CONDA_NPY: "19"
+      CONDA_NPY: "17"
 
     - PYTHON: "C:\\Python34_32"
       PYTHON_VERSION: "3.4"
       PYTHON_ARCH: "32"
       CONDA_PY: "34"
-      CONDA_NPY: "19"
+      CONDA_NPY: "17"
 
     - PYTHON: "C:\\Python34_64"
       PYTHON_VERSION: "3.4"
       PYTHON_ARCH: "64"
       CONDA_PY: "34"
-      CONDA_NPY: "19"
+      CONDA_NPY: "17"
 
+    - PYTHON: "C:\\Python26_32"
+      PYTHON_VERSION: "2.6"
+      PYTHON_ARCH: "32"
+      CONDA_PY: "26"
+      CONDA_NPY: "18"
+
+    - PYTHON: "C:\\Python26_64"
+      PYTHON_VERSION: "2.6"
+      PYTHON_ARCH: "64"
+      CONDA_PY: "26"
+      CONDA_NPY: "18"
+
+    - PYTHON: "C:\\Python27_32"
+      PYTHON_VERSION: "2.7"
+      PYTHON_ARCH: "32"
+      CONDA_PY: "27"
+      CONDA_NPY: "18"
+
+    - PYTHON: "C:\\Python27_64"
+      PYTHON_VERSION: "2.7"
+      PYTHON_ARCH: "64"
+      CONDA_PY: "27"
+      CONDA_NPY: "18"
+
+    - PYTHON: "C:\\Python33_32"
+      PYTHON_VERSION: "3.3"
+      PYTHON_ARCH: "32"
+      CONDA_PY: "33"
+      CONDA_NPY: "18"
+
+    - PYTHON: "C:\\Python33_64"
+      PYTHON_VERSION: "3.3"
+      PYTHON_ARCH: "64"
+      CONDA_PY: "33"
+      CONDA_NPY: "18"
+
+    - PYTHON: "C:\\Python34_32"
+      PYTHON_VERSION: "3.4"
+      PYTHON_ARCH: "32"
+      CONDA_PY: "34"
+      CONDA_NPY: "18"
+
+    - PYTHON: "C:\\Python34_64"
+      PYTHON_VERSION: "3.4"
+      PYTHON_ARCH: "64"
+      CONDA_PY: "34"
+      CONDA_NPY: "18"
+      
 install:
   # this installs the appropriate Miniconda (Py2/Py3, 32/64 bit),
   # as well as pip, conda-build, and the binstar CLI
@@ -129,11 +176,14 @@ test_script:
   # is set dynamically. This unfortunately mean that conda build --output
   # doesn't really work.
   #
-  - "%CMD_IN_ENV% conda build conda-recipe --quiet"
+  - "%CMD_IN_ENV% conda build astropy-0.4 --quiet"
+  - "%CMD_IN_ENV% conda build astropy-1.0 --quiet"
+
   # Move the conda package into the current directory, to register it
   # as an "artifact" for Appveyor. cmd.exe does't have good globbing, so
   # we'll use a simple python script.
-  - python continuous-integration\move-conda-package.py conda-recipe
+  - python continuous-integration\move-conda-package.py astropy-0.4
+  - python continuous-integration\move-conda-package.py astropy-1.0
 
 artifacts:
   # Archive the generated conda package in the ci.appveyor.com build report.

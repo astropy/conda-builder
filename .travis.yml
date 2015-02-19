@@ -6,24 +6,30 @@ os:
 
 env:
   matrix:
-    - python=2.6 CONDA_PY=26 CONDA_NPY=19
-    - python=2.7 CONDA_PY=27 CONDA_NPY=19
-    - python=3.3 CONDA_PY=33 CONDA_NPY=19
-    - python=3.4 CONDA_PY=34 CONDA_NPY=19
+    - python=2.6 CONDA_PY=26 CONDA_NPY=16
+    - python=2.7 CONDA_PY=27 CONDA_NPY=16
+    - python=3.3 CONDA_PY=33 CONDA_NPY=16
+    - python=3.4 CONDA_PY=34 CONDA_NPY=16
+    - python=2.6 CONDA_PY=26 CONDA_NPY=17
+    - python=2.7 CONDA_PY=27 CONDA_NPY=17
+    - python=3.3 CONDA_PY=33 CONDA_NPY=17
+    - python=3.4 CONDA_PY=34 CONDA_NPY=17
     - python=2.6 CONDA_PY=26 CONDA_NPY=18
     - python=2.7 CONDA_PY=27 CONDA_NPY=18
     - python=3.3 CONDA_PY=33 CONDA_NPY=18
     - python=3.4 CONDA_PY=34 CONDA_NPY=18
 
   global:
-    - secure: "I3W4wZHGPszNoJzLlKuvXjsDZDzKqHZI10hXEzZkdusifSZ5rg3iwWimndKeUrJcZgOAAv/hxCAB66Izp0oKq7d1zftbCaAR71w6ZZca4D3TIvDntNQqL6KYPLrOq2Jt+6I5uFu5JUB4ciBY8AF6oQ8LKUguO75pTfbV9ZCEkmg="
+    - secure: "C/53r3QGcEslm6rPT4/+IKxLVcXW/mgBIVyQ1eLCaFP4N4TqxFatfuiBQGP1TJI1uLDFVgaKjaDozJDYZcD0pq1fLqySZpHZa8m2eL/04+TH0HUtBtym+/e+QilqyxaRhvQNKcUDnjnRwSaLsLO0ol+a6+MjL6relDSIVDQmP3s="
 
 install:
   - source continuous-integration/travis/install_$TRAVIS_OS_NAME.sh
 
 script:
-  - conda build conda-recipe --quiet
+  - conda build astropy-0.4 --quiet
+  - conda build astropy-1.0 --quiet
 
 after_success:
-  - python continuous-integration/move-conda-package.py conda-recipe
+  - python continuous-integration/move-conda-package.py astropy-0.4
+  - python continuous-integration/move-conda-package.py astropy-1.0
   - binstar -t $BINSTAR_TOKEN upload --force *.tar.bz2

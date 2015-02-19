@@ -11,11 +11,14 @@ env:
     - python=2.6 CONDA_PY=26 CONDA_NPY=17
     - python=2.7 CONDA_PY=27 CONDA_NPY=17
     - python=3.3 CONDA_PY=33 CONDA_NPY=17
-    - python=3.4 CONDA_PY=34 CONDA_NPY=17
     - python=2.6 CONDA_PY=26 CONDA_NPY=18
     - python=2.7 CONDA_PY=27 CONDA_NPY=18
     - python=3.3 CONDA_PY=33 CONDA_NPY=18
     - python=3.4 CONDA_PY=34 CONDA_NPY=18
+    - python=2.6 CONDA_PY=26 CONDA_NPY=19
+    - python=2.7 CONDA_PY=27 CONDA_NPY=19
+    - python=3.3 CONDA_PY=33 CONDA_NPY=19
+    - python=3.4 CONDA_PY=34 CONDA_NPY=19
 
   global:
     - secure: "C/53r3QGcEslm6rPT4/+IKxLVcXW/mgBIVyQ1eLCaFP4N4TqxFatfuiBQGP1TJI1uLDFVgaKjaDozJDYZcD0pq1fLqySZpHZa8m2eL/04+TH0HUtBtym+/e+QilqyxaRhvQNKcUDnjnRwSaLsLO0ol+a6+MjL6relDSIVDQmP3s="

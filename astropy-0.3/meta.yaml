@@ -1,0 +1,27 @@
+package:
+  name: astropy
+  version: !!str 0.3.2
+
+source:
+  fn: astropy-0.3.2.tar.gz
+  url: http://pypi.python.org/packages/source/a/astropy/astropy-0.3.2.tar.gz
+  md5: a9ca553a7622c09221068c8b202c21ef
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+  run:
+    - python
+    - numpy
+
+test:
+  imports:
+    - astropy
+#  commands:
+#    - python -c "import astropy; astropy.test()"
+
+about:
+  home: http://www.astropy.org
+  license: BSD

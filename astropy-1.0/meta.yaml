@@ -1,11 +1,11 @@
 package:
   name: astropy
-  version: !!str 1.0
+  version: !!str 1.0.1
 
 source:
-  fn: astropy-1.0.tar.gz
-  url: http://pypi.python.org/packages/source/a/astropy/astropy-1.0.tar.gz
-  md5: 1f15b51eb7cbad3345a34770c87ef906
+  fn: astropy-1.0.1.tar.gz
+  url: http://pypi.python.org/packages/source/a/astropy/astropy-1.0.1.tar.gz
+  md5: 89511396966f4a34919e6971ab5e4d34
 
 requirements:
   build:

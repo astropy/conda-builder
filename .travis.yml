@@ -27,12 +27,12 @@ install:
   - source continuous-integration/travis/install_$TRAVIS_OS_NAME.sh
 
 script:
-  - conda build astropy-0.3 --quiet
-  - conda build astropy-0.4 --quiet
-  - conda build astropy-1.0 --quiet
+  - conda build astropy-0.3.x --quiet
+  - conda build astropy-0.4.x --quiet
+  - conda build astropy-1.0.x --quiet
 
 after_success:
-  - python continuous-integration/move-conda-package.py astropy-0.3
-  - python continuous-integration/move-conda-package.py astropy-0.4
-  - python continuous-integration/move-conda-package.py astropy-1.0
+  - python continuous-integration/move-conda-package.py astropy-0.3.x
+  - python continuous-integration/move-conda-package.py astropy-0.4.x
+  - python continuous-integration/move-conda-package.py astropy-1.0.x
   - binstar -t $BINSTAR_TOKEN upload --force *.tar.bz2

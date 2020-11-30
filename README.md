@@ -1,3 +1,8 @@
+ARCHIVED
+========
+
+This repository has been archived, as it has been replaced by conda-forge implemenations
+
 About
 =====
 
